@@ -29,7 +29,7 @@ DB_CONFIG = {
     'server': 'localhost',
     'database': 'UniversityDB',
     'username': 'sa',
-    'password': 'Kien2365!',
+    'password': 'password',
     'driver': '{ODBC Driver 17 for SQL Server}'
 }
 
@@ -217,4 +217,5 @@ def get_current_semester():
     result = execute_query("SELECT TOP 1 SemesterID, Semester_Name FROM Semesters ORDER BY Start_Date DESC")
     if not result.empty:
         return result.iloc[0]['SemesterID'], result.iloc[0]['Semester_Name']
+
     return None, None
